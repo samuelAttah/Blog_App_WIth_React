@@ -30,7 +30,7 @@ const App = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await api.get("/postss", {
+        const response = await api.get("/posts", {
           headers: { Accept: "application/json" },
         });
         console.log(response);
