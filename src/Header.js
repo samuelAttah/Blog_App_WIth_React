@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaLaptop, FaTabletAlt, FaMobileAlt } from "react-icons/fa";
 
-const Header = ({ title }) => {
+const Header = ({ title, width }) => {
   const activeStyle = { color: "red" };
   return (
     <header className="Header">
@@ -28,6 +29,13 @@ const Header = ({ title }) => {
           About
         </NavLink>
       </nav>
+      {width < 768 ? (
+        <FaMobileAlt />
+      ) : width < 992 ? (
+        <FaTabletAlt />
+      ) : (
+        <FaLaptop />
+      )}
     </header>
   );
 };
